@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { authToken, createMeeting } from "../API";
 
-export function JoinScreen({ setToken, setMeetingId, setParticipantName, setMicOn, setWebcamOn, setMode, micOn, webcamOn }) {
+export function JoinScreen({ setMeetingId, setParticipantName, setMicOn, setWebcamOn, setMode, micOn, webcamOn }) {
     const [name, setName] = useState("John Doe");
     const [meetingIdInput, setMeetingIdInput] = useState("");
 

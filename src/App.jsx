@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { MeetingProvider } from "@videosdk.live/react-sdk";
 import { JoinScreen } from "./components/JoinScreen";
 import { MeetingView } from "./components/MeetingView";
+import { authToken } from "./API";
 
 function App() {
-  const [token, setToken] = useState("");
   const [meetingId, setMeetingId] = useState("");
   const [participantName, setParticipantName] = useState("");
   const [micOn, setMicOn] = useState(true);
@@ -15,7 +15,6 @@ function App() {
     <div className="bg-gray-900 min-h-screen text-white font-sans">
       {mode === "JOIN" ? (
         <JoinScreen
-          setToken={setToken}
           setMeetingId={setMeetingId}
           setParticipantName={setParticipantName}
           setMicOn={setMicOn}
@@ -32,14 +31,14 @@ function App() {
             webcamEnabled: webcamOn,
             name: participantName,
           }}
-          token={token}
+          token={authToken}
           key={meetingId} // Force remount on meeting switch
         >
           <MeetingView
             meetingId={meetingId}
             onLeave={() => setMode("JOIN")}
             onSwitchMeeting={(newMeetingId) => setMeetingId(newMeetingId)}
-            token={token}
+            token={authToken}
           />
         </MeetingProvider>
       )}
