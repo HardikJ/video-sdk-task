@@ -23,8 +23,10 @@ This React application demonstrates two advanced features of VideoSDK:
     *Alternatively, you can paste the token directly in the UI when joining.*
     
 3.  **Add Env File**:
+    Create a .env file in the root directory of the project and Add the variable to the .env file:
     ```bash
-    Create .env file and add <Auth_Token>
+    VITE_VIDEOSDK_TOKEN=<your_generated_auth_token_here>
+    ```
 
 4.  **Run the Application**:
     ```bash
