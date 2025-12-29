@@ -18,12 +18,15 @@ This React application demonstrates two advanced features of VideoSDK:
     ```bash
     npm install
     ```
-
 2.  **Configure Auth Token**:
     Open `src/API.js` and replace `<Auth_Token>` with your valid VideoSDK JWT Token.
     *Alternatively, you can paste the token directly in the UI when joining.*
+    
+3.  **Add Env File**:
+    ```bash
+    Create .env file and add <Auth_Token>
 
-3.  **Run the Application**:
+4.  **Run the Application**:
     ```bash
     npm run dev
     ```
